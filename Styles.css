@@ -1,0 +1,96 @@
+@font-face {
+  src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
+    format("woff2");
+  font-family: "Meta";
+  font-style: normal;
+  font-weight: normal;
+}
+
+h2 {
+  max-height: 100%;
+  margin-left: -5vw;
+  transition: all 0.5s;
+  -webkit-text-stroke: 4px #2c1f11;
+  font-variation-settings: "wght" 900, "ital" 1;
+  font-size: 4rem;
+  text-align: left;
+  color: transparent;
+  font-family: "Meta", sans-serif;
+  text-shadow: 5px 5px 0px #e9da9d,
+    10px 10px 0px #b3b3b3,
+    15px 15px 0px #000000,
+    20px 20px 5px #e4c84a,
+    30px 30px 10px #faba4b;
+  cursor: pointer;
+}
+
+h2:hover {
+  font-variation-settings: "wght" 100, "ital" 0;
+  text-decoration: underline;
+  text-shadow: none;
+  font-variation-settings: "bold" 2;
+}
+
+body {
+  max-height: 100%;
+  box-sizing: border-box;
+  margin-left: 10vw;
+  margin-top: 10vh;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #c2c0b6;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* defines pre-hovered behaviors */
+p {
+  transition: all 0.75s;
+  -webkit-text-stroke: 3px #2c1f11;
+  font-variation-settings: "wght" 900, "ital" 1;
+  font-size: 3rem;
+  text-align: left;
+  color: transparent;
+  font-family: "Meta", sans-serif;
+  /* ideally these would also be blurred but that slowed down the site phenominally */
+  text-shadow: 2px 2px 0px #e9da9d,
+    5px 5px 0px #000000,
+    10px 10px 0px #e4c84a,
+    12px 12px 0px #faba4b;
+  cursor: pointer;
+}
+
+/* defines text behaviors upon hovering */
+p span:hover {
+  font-variation-settings: "wght" 100, "ital" 0;
+  text-shadow: none;
+  font-variation-settings: "bold" 1;
+}
+
+ /* The trigger word for nodes */
+    .d3-trigger {
+        cursor: pointer;
+        transition: all 0.5s;
+        padding: 0 4px;
+        margin: 0;
+        padding-right: +10px;
+        box-sizing: border-box;
+        padding-bottom: 80px;
+    }
+
+    /* Fixed overlay ensures nothing is cut off */
+    #d3-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        z-index: 9999; /* Stay on top */
+    }
+
+    /* Text wrapper characteristics */
+    .node-circle { fill: #E6D81C; }
+    .node-text { fill: #333; font-size: 1rem; font-weight: bold; }
+    .link-line { stroke: #E6D81C; stroke-opacity: 0.4; stroke-width: 2px;}
